@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.15
-MAINTAINER needo <needo@superhero.org>
+MAINTAINER Okachobi <okachobi@gmail.com>
 
 #########################################
 ##        ENVIRONMENTAL CONFIG         ##

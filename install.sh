@@ -18,12 +18,20 @@ rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 #########################################
 
 # Repositories
+
+add-apt-repository "deb http://archive.ubuntu.com/ubuntu/ utopic main restricted"
+add-apt-repository "deb http://archive.ubuntu.com/ubuntu/ vivid main restricted"
+
+
 add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse"
 add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse"
 
 # Install Dependencies
 apt-get update -qq
-apt-get install -qy python wget unrar git python-lxml
+
+# Install Dependencies - pull Python 2.7.9 from vivid APT repo
+apt-get -t vivid install -qy python2.7 python-cheetah python-lxml
+apt-get install -qy ca-certificates wget unrar unzip git
 
 #########################################
 ##             INSTALLATION            ##

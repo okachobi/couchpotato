@@ -1,5 +1,7 @@
 This is a Dockerfile setup for couchpotato - https://couchpota.to/
 
+This branch adds Python 2.7.9 to the base image to avoid openssl issues.
+
 By default this Docker installs the latest stable version of CouchPotato:
 
 ```
